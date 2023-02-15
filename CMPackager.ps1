@@ -28,7 +28,7 @@ param (
 		}
 		return $true
 	})]
-	[System.IO.FileInfo]$PreferenceFile = "$ScriptRoot\CMPackager.prefs",
+	[System.IO.FileInfo]$PreferenceFile = "$PSScriptRoot\CMPackager.prefs",
 	
 	[ValidateScript({
 		if (-not ($_ | Resolve-Path | Test-Path -PathType Container)) {
